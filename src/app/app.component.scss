@@ -1,0 +1,40 @@
+.main-container {
+    width: 500px;
+    padding: 0px 20px;
+}
+
+
+.bg {
+    z-index: -5;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.bg-filter {
+    z-index: -3;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgba(3, 5, 26, 0.75);
+}
+
+#myVideo {
+    z-index: -4;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+
+@media only screen and (max-width: 1300px) {
+    
+}
+

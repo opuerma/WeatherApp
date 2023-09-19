@@ -19,7 +19,7 @@ export class WeatherService {
 
   getDetails(urlCity: string) {
     return this.http.get<WeatherData>(
-      `${environment.baseUrlApi}/forecast.json?key=${environment.apiKey}&q=${urlCity}&days=3&aqi=yes&lang=es`
+      `${environment.baseUrlApi}/forecast.json?key=${environment.apiKey}&q=${urlCity}&days=3&aqi=yes&lang=en`
     );
   }
 
