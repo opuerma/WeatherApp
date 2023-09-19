@@ -3,6 +3,13 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@app/*":["src/app/*"],
+      "@compartido/*":["src/app/compartido/*"],
+      "@entorno/*":["src/entorno/*"],
+      "@paginas/*":["src/app/componentes/paginas/*"],
+      "@localidades/*":["src/app/componentes/paginas/localidades/*"]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,

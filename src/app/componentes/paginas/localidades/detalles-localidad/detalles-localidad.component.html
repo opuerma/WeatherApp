@@ -1,0 +1,45 @@
+<div *ngIf="localidad$ | async as localidad">
+
+    <div class="box-main-content">
+
+        <div class="titulo">
+            <h1>El tiempo en {{ localidad.location.name }}</h1>
+            <p class="last-update">Última actualización: {{ localidad.current.last_updated }}h</p>
+        </div>
+    
+        <div class="box-introduccion">
+    
+            <div class="titular">
+                <div class="icono">
+                    <img src="{{localidad.current.condition.icon}}" alt="">
+                </div>
+                <div class="box-temperatura">
+                    <div class="temperatura">{{ localidad.current.temp_c }}ºC</div>
+                    <div class="texto">{{ localidad.current.condition.text }}</div>
+                </div>
+            </div>
+    
+            <div class="info-secundaria">
+                <div class="label-info">
+                    <div class="label">Sensación</div>
+                    <div class="value">{{ localidad.current.feelslike_c }} ºC</div>
+                </div>
+                <div class="label-info">
+                    <div class="label">Máxima</div>
+                    <div class="value">{{ localidad.forecast.forecastday[0].day.maxtemp_c }} ºC</div>
+                </div>
+                <div class="label-info">
+                    <div class="label">Mínima</div>
+                    <div class="value">{{ localidad.forecast.forecastday[0].day.mintemp_c }} ºC</div>
+                </div>
+                <div class="label-info">
+                    <div class="label">Viento</div>
+                    <div class="value">{{ localidad.current.wind_kph }} Km/h</div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+</div>
+<button (click)="goBack()">Atrás</button>
