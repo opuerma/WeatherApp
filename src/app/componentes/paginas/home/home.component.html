@@ -1,1 +1,22 @@
-<app-lista-localidades></app-lista-localidades>
+
+<h1>Popular cities</h1>
+
+<div *ngIf="barcelona$ | async as city" class="home-card">
+    <app-carta-individual [city]="city"></app-carta-individual>
+</div>
+
+<div *ngIf="paris$ | async as city" class="home-card">
+    <app-carta-individual [city]="city"></app-carta-individual>
+</div>
+
+<div *ngIf="london$ | async as city" class="home-card">
+    <app-carta-individual [city]="city"></app-carta-individual>
+</div>
+
+<div *ngIf="newyork$ | async as city" class="home-card">
+    <app-carta-individual [city]="city"></app-carta-individual>
+</div>
+
+<div *ngIf="tokyo$ | async as city" class="home-card">
+    <app-carta-individual [city]="city"></app-carta-individual>
+</div>

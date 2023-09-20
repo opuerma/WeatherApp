@@ -1,0 +1,8 @@
+<div class="home-subcard"
+[routerLink]="['/detalles-localidad', city.location.name + '-' + city.location.region + '-' + city.location.country]">
+    <div class="left">
+        <img src="{{ city.current.condition.icon }}" alt="">
+        {{ city.location.name }} <span>{{ city.location.country }}</span>
+    </div>
+    <div class="right">{{ city.current.temp_c | number: '1.0-0' }}º</div>
+</div>

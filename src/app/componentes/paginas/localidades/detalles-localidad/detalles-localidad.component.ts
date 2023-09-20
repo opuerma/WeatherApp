@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common'
+import { Location } from '@angular/common';
 import { WeatherData } from '@app/compartido/modelos/weather.model';
 import { WeatherService } from '@app/compartido/servicios/weather.service';
 import { Observable, take } from 'rxjs';
@@ -36,9 +36,6 @@ export class DetallesLocalidadComponent implements OnInit {
         });
 
         this.proximasHoras = localidad.forecast.forecastday[0].hour.slice(currentHourIndex, currentHourIndex + 10);
-
-        console.log('Hora actual:', lastUpdated);
-        console.log('Próximas 3 horas:', this.proximasHoras);
       });
 
     }))
