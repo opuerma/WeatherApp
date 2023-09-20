@@ -6,18 +6,23 @@ import { DetallesLocalidadComponent } from './detalles-localidad/detalles-locali
 import { ListaLocalidadesComponent } from './lista-localidades/lista-localidades.component';
 import { LocalidadComponent } from './localidad.component';
 import { ProximasHorasComponent } from '@app/compartido/componentes/proximas-horas/proximas-horas.component';
+import { ProximosDiasComponent } from '@app/compartido/componentes/proximos-dias/proximos-dias.component';
 
 const myComponents = [
   DetallesLocalidadComponent,
   ListaLocalidadesComponent,
   LocalidadComponent,
-  ProximasHorasComponent
+  ProximasHorasComponent,
+  ProximosDiasComponent
 ];
 
 
 @NgModule({
   declarations: [...myComponents],
-  imports: [CommonModule, RouterModule],
+  imports: [
+    CommonModule,
+    RouterModule
+  ],
   exports: [...myComponents]
 })
 export class LocalidadesModule { }

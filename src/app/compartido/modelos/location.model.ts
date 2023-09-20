@@ -6,5 +6,13 @@ export interface SearchLocation {
     lat: number
     lon: number
     url: string
-  }
+}
+
+export interface ForecastData {
+  date: string
+  maxtemp_c: number
+  mintemp_c: number
+  icon: string
+  text: string
+}
   

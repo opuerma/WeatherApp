@@ -15,11 +15,11 @@
             </div>
             <div class="day-max-min">
                 <div class="maxmin-img">
-                    <img src="../../../../../assets/svg/arrow_up_icon.svg" alt="" class="filter-white">
+                    <img src="../../../../../assets/svg/arrow_up_icon.svg" alt="Max" class="filter-white">
                 </div>
                 {{ localidad.forecast.forecastday[0].day.maxtemp_c }}º / 
                 <div class="maxmin-img">
-                    <img src="../../../../../assets/svg/arrow_down_icon.svg" alt="" class="filter-white">
+                    <img src="../../../../../assets/svg/arrow_down_icon.svg" alt="Min" class="filter-white">
                 </div>
                 {{ localidad.forecast.forecastday[0].day.mintemp_c }}º
             </div>
@@ -27,6 +27,10 @@
 
         <div class="prox-horas">
             <app-proximas-horas [proximasHoras]="proximasHoras"></app-proximas-horas>
+        </div>
+
+        <div class="prox-dias">
+            <app-proximos-dias [proximosDias]="proximosDias"></app-proximos-dias>
         </div>
     
     </div>

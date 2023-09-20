@@ -12,19 +12,16 @@ import { WeatherData } from '@app/compartido/modelos/weather.model';
 })
 export class HomeComponent implements OnInit {
 
-  barcelona$: Observable<WeatherData> | undefined;
-  paris$: Observable<WeatherData> | undefined;
-  london$: Observable<WeatherData> | undefined;
-  newyork$: Observable<WeatherData> | undefined;
-  tokyo$: Observable<WeatherData> | undefined;
+  barcelona$?: Observable<WeatherData>;
+  paris$?: Observable<WeatherData>;
+  london$?: Observable<WeatherData>;
+  newyork$?: Observable<WeatherData>;
+  tokyo$?: Observable<WeatherData>;
 
-  constructor (
-    private route: ActivatedRoute,
-    private weatherService: WeatherService,
-    private location: Location
-  ) { }
+  constructor (private weatherService: WeatherService) { }
 
   ngOnInit(): void {
+
     this.barcelona$ = this.weatherService.getDetails('barcelona-catalonia-spain');
     this.paris$ = this.weatherService.getDetails('paris-ile-de-france-france');
     this.london$ = this.weatherService.getDetails('london-city-of-london-greater-london-united-kingdom');

@@ -12,3 +12,16 @@
         background-color: rgb(51, 51, 168);
     }
 }
+
+.not-found-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(226, 93, 60, 0.7);
+    padding: 10px 20px;
+    margin-top: -18px;
+    border-radius: 50px;
+    box-sizing: border-box;
+
+}

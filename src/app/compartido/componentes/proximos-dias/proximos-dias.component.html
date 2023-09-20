@@ -1,0 +1,22 @@
+<div class="dias-container">
+
+    <div class="dia-container" *ngFor="let dia of proximosDias">
+        <div class="left">
+            <div class="icon">
+                <img src="{{ dia.icon }}" alt="">
+            </div>
+            <div class="dia">{{ formatDay(dia.date) }}</div>
+        </div>
+
+        <div class="day-max-min">
+            <div class="maxmin-img">
+                <img src="../../../../assets/svg/arrow_up_icon.svg" alt="Max" class="filter-white">
+            </div>
+            {{ dia.maxtemp_c }} / 
+            <div class="maxmin-img">
+                <img src="../../../../assets/svg/arrow_down_icon.svg" alt="Min" class="filter-white">
+            </div>
+            {{ dia.mintemp_c }}º
+        </div>
+    </div>
+</div>
