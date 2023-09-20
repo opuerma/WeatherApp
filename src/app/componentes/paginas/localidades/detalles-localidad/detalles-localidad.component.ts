@@ -35,7 +35,7 @@ export class DetallesLocalidadComponent implements OnInit {
           return hourTime > lastUpdated;
         });
 
-        this.proximasHoras = localidad.forecast.forecastday[0].hour.slice(currentHourIndex, currentHourIndex + 3);
+        this.proximasHoras = localidad.forecast.forecastday[0].hour.slice(currentHourIndex, currentHourIndex + 10);
 
         console.log('Hora actual:', lastUpdated);
         console.log('Próximas 3 horas:', this.proximasHoras);

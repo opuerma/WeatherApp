@@ -18,6 +18,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 input {
@@ -44,4 +45,26 @@ a {
 }
 .filter-white {
     filter: invert(94%) sepia(94%) saturate(26%) hue-rotate(28deg) brightness(107%) contrast(107%);
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(107, 107, 107, 0.8);
+    border-radius: 20px;
+
+    &:hover {
+        background: #555;
+    }
 }

@@ -1,5 +1,6 @@
 .cards-cointainer {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -9,6 +10,16 @@
 .box-hora {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    margin: 20px 10px;
+    &:first-child {margin-left: 20px;}
+    &:last-child {padding-right: 20px;}
+
+    .mid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 0;
+    }
 }
