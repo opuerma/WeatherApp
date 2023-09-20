@@ -1,5 +1,3 @@
-<p>
-    <a [routerLink]="['/detalles-localidad', localidad.url]">
-        <p>{{ localidad.name }}, {{ localidad.region }}, {{ localidad.country }}</p>
-    </a>
-</p>
+<div [routerLink]="['/detalles-localidad', localidad.url]">
+    <p>{{ localidad.name }} <span>{{ localidad.region }}, {{ localidad.country }}</span></p>
+</div>

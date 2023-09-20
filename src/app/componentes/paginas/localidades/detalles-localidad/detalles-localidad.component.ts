@@ -13,6 +13,7 @@ import { Observable, take } from 'rxjs';
 export class DetallesLocalidadComponent implements OnInit {
   
   localidad$: Observable<WeatherData> | undefined;
+  proximasHoras: any[] = [];
 
   constructor (
     private route: ActivatedRoute,
@@ -25,6 +26,21 @@ export class DetallesLocalidadComponent implements OnInit {
     this.route.params.pipe(take(1)).subscribe((params => {
       const url = params['id'];
       this.localidad$ = this.weatherService.getDetails(url);
+
+      this.localidad$.subscribe((localidad) => {
+        const lastUpdated = new Date(localidad.current.last_updated);
+
+        const currentHourIndex = localidad.forecast.forecastday[0].hour.findIndex(hourData => {
+          const hourTime = new Date(hourData.time);
+          return hourTime > lastUpdated;
+        });
+
+        this.proximasHoras = localidad.forecast.forecastday[0].hour.slice(currentHourIndex, currentHourIndex + 3);
+
+        console.log('Hora actual:', lastUpdated);
+        console.log('Próximas 3 horas:', this.proximasHoras);
+      });
+
     }))
   }
 

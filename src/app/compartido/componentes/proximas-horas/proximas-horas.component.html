@@ -1,0 +1,12 @@
+
+<div class="cards-cointainer">
+
+    <div class="box-hora" *ngFor="let hora of proximasHoras">
+        <div class="top">{{ hora.time | date: 'HH:mm' }}h</div>
+        <div class="mid">
+            <img src="{{ hora.condition.icon }}" alt="">
+        </div>
+        <div class="bottom">{{ hora.temp_c }}º</div>
+    </div>
+    
+</div>

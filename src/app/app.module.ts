@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './compartido/componentes/header/header.component';
 import { FormSearchComponent } from './compartido/componentes/form-search/form-search.component';
 import { FooterComponent } from './compartido/componentes/footer/footer.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [

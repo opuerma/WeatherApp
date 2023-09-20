@@ -4,7 +4,8 @@
 
         <div class="titulo">
             <h1>{{ localidad.location.name }}</h1>
-            <p>{{ localidad.forecast.forecastday[0].date | date: 'EEEE, MMM d' }}</p>
+            <p>{{ localidad.location.region }}, {{ localidad.location.country }}</p>
+            <!--<p>{{ localidad.forecast.forecastday[0].date | date: 'EEEE, MMM d' }}</p>-->
         </div>
 
         <div class="main-temp">
@@ -12,12 +13,20 @@
                 <div class="current-temp">{{ localidad.current.temp_c }}<span>º</span></div>
                 <div class="current-text">{{ localidad.current.condition.text }}</div>
             </div>
-            <div class="day-min-max">
-                <img src="../../../../../assets/svg/arrow_up_icon.svg" alt="" class="filter-white">
+            <div class="day-max-min">
+                <div class="maxmin-img">
+                    <img src="../../../../../assets/svg/arrow_up_icon.svg" alt="" class="filter-white">
+                </div>
                 {{ localidad.forecast.forecastday[0].day.maxtemp_c }}º / 
-                <img src="../../../../../assets/svg/arrow_down_icon.svg" alt="" class="filter-white">
+                <div class="maxmin-img">
+                    <img src="../../../../../assets/svg/arrow_down_icon.svg" alt="" class="filter-white">
+                </div>
                 {{ localidad.forecast.forecastday[0].day.mintemp_c }}º
             </div>
+        </div>
+
+        <div class="prox-horas">
+            <app-proximas-horas [proximasHoras]="proximasHoras"></app-proximas-horas>
         </div>
     
     </div>

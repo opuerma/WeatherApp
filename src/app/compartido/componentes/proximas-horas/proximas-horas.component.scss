@@ -1,0 +1,14 @@
+.cards-cointainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-hora {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

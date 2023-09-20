@@ -1,4 +1,4 @@
-<div *ngFor="let localidad of localidades">
+<div class="card" *ngFor="let localidad of localidades">
     <app-localidad [localidad]="localidad"></app-localidad>
 </div>
 <div *ngIf="localidades.length <= 0">

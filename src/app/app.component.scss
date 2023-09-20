@@ -30,11 +30,14 @@
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
+    filter: blur(5px);
 }
 
 
 
-@media only screen and (max-width: 1300px) {
-    
+@media only screen and (max-width: 550px) {
+    .main-container {
+        width: 90vw;
+    }
 }
 
